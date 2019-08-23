@@ -22,7 +22,7 @@ export default class MenuBasic extends Component {
                         active={activeItem === 'Home'}
                         onClick={this.handleItemClick}
                     >
-                        Home
+                        <Icon name='home' /> Home
                 </Menu.Item>
                 </NavLink>
                 <NavLink to="/characters">
@@ -31,7 +31,7 @@ export default class MenuBasic extends Component {
                         active={activeItem === 'Characters'}
                         onClick={this.handleItemClick}
                     >
-                        Characters
+                        <Icon name='group' /> Characters
                 </Menu.Item>
                 </NavLink>
 
@@ -41,7 +41,7 @@ export default class MenuBasic extends Component {
                         active={activeItem === 'Location'}
                         onClick={this.handleItemClick}
                     >
-                        Locations
+                        <Icon name='map' />  Locations
                 </Menu.Item>
                 </NavLink>
 
@@ -51,7 +51,7 @@ export default class MenuBasic extends Component {
                         active={activeItem === 'Episodes'}
                         onClick={this.handleItemClick}
                     >
-                        Episodes
+                        <Icon name='video camera' /> Episodes
                 </Menu.Item>
                 </NavLink>
             </Menu>
