@@ -3,20 +3,20 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 
 const CharacterCard = (props) => (
   <Card>
-    <Image src={props.character.image} wrapped ui={false} />
+    <Image src={props.image} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>{props.character.name}</Card.Header>
+      <Card.Header>{props.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>{props.character.species} {props.character.status}</span>
+        <span className='date'>{props.species} {props.status}</span>
       </Card.Meta>
       <Card.Description>
-        {props.character.location.name}
-        {props.character.origin.name}
+        {props.location}
+        {props.origin}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <Icon name='user' />
-      {props.character.episode.length} Episodes
+      {props.episodes} Episodes
     </Card.Content>
   </Card>
 )
