@@ -13,7 +13,7 @@ export default function CharacterList() {
     Axios.get('https://rickandmortyapi.com/api/character/')
       .then(resp => setCharList(resp.data.results))
       .catch(error => console.log("Axios Error:", error))
-  }, []);
+  }, [charList]);
 
   return (
     <section className="character-list grid-view">
