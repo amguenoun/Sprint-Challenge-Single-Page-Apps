@@ -7,11 +7,9 @@ const CharacterCard = (props) => (
     <Card.Content>
       <Card.Header>{props.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>{props.species} {props.status}</span>
+        <span className='date'>{`${props.species} - ${props.status}`}</span>
       </Card.Meta>
-      <Card.Description>
-        {props.location}
-        {props.origin}
+      <Card.Description>{`${props.location} - ${props.origin}`}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
