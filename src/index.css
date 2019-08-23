@@ -37,3 +37,11 @@ main {
 header h1 {
   text-align: center;
 }
+
+.pages{
+  text-align:center;
+}
+.loader{
+  text-align:center;
+  margin:4% 0%;
+}
