@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import EpisodeCard from './EpisodeCard';
 import PageMenu from "./Pagination";
+import Loader from "react-loader-spinner";
 
 export default function EpisodeList() {
     // TODO: Add useState to track data from useEffect
@@ -20,7 +21,7 @@ export default function EpisodeList() {
         setPage(number);
     }
 
-    return (
+    return ((!epList) ? <Loader className="loader" type="Oval" color="red" height={80} width={80} /> :
         <>
             <section className="episode-list grid-view">
                 {epList.map(ep => {

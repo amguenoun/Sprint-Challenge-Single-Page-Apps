@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
+import Loader from "react-loader-spinner";
 
 import LocationCard from "./LocationCard";
 import PageMenu from './Pagination';
@@ -18,7 +19,7 @@ export default function LocationsList() {
         setPage(number);
     }
 
-    return (
+    return ((!locList) ? <Loader className="loader" type="Oval" color="red" height={80} width={80} /> :
         <>
             <section className="location-list grid-view">
                 {locList.map(location => {

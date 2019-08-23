@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import Loader from "react-loader-spinner";
 
 import CharacterCard from "./CharacterCard";
 import PageMenu from "./Pagination";
 
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [charList, setCharList] = useState([]);
+  const [charList, setCharList] = useState();
   const [page, setPage] = useState(1);
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -20,7 +22,7 @@ export default function CharacterList() {
     setPage(number);
   }
 
-  return (
+  return ((!charList) ? <Loader className="loader" type="Oval" color="red" height={80} width={80} /> :
     <>
       <section className="character-list grid-view">
         {charList.map(character => {
