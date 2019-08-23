@@ -41,3 +41,7 @@ header h1 {
 .pages{
   text-align:center;
 }
+.loader{
+  text-align:center;
+  margin:4% 0%;
+}
