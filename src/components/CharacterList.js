@@ -12,7 +12,7 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     Axios.get('https://rickandmortyapi.com/api/character/')
       .then(resp => setCharList(resp.data.results))
-      .catch(error => console.log("Axios Error:", error))
+      .catch(error => console.log("Axios Character Error:", error))
   }, [charList]);
 
   return (
