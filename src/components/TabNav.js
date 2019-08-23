@@ -16,37 +16,44 @@ export default class MenuBasic extends Component {
 
         return (
             <Menu>
-                <Menu.Item
-                    name='Home'
-                    active={activeItem === 'Home'}
-                    onClick={this.handleItemClick}
-                >
-                    Home
+                <NavLink to="/">
+                    <Menu.Item
+                        name='Home'
+                        active={activeItem === 'Home'}
+                        onClick={this.handleItemClick}
+                    >
+                        Home
                 </Menu.Item>
+                </NavLink>
+                <NavLink to="/characters">
+                    <Menu.Item
+                        name='Characters'
+                        active={activeItem === 'Characters'}
+                        onClick={this.handleItemClick}
+                    >
+                        Characters
+                </Menu.Item>
+                </NavLink>
 
-                <Menu.Item
-                    name='Characters'
-                    active={activeItem === 'Characters'}
-                    onClick={this.handleItemClick}
-                >
-                    Characters
+                <NavLink to="/locations">
+                    <Menu.Item
+                        name='Location'
+                        active={activeItem === 'Location'}
+                        onClick={this.handleItemClick}
+                    >
+                        Locations
                 </Menu.Item>
+                </NavLink>
 
-                <Menu.Item
-                    name='Location'
-                    active={activeItem === 'Location'}
-                    onClick={this.handleItemClick}
-                >
-                    Location
+                <NavLink to="/episodes">
+                    <Menu.Item
+                        name='Episodes'
+                        active={activeItem === 'Episodes'}
+                        onClick={this.handleItemClick}
+                    >
+                        Episodes
                 </Menu.Item>
-
-                <Menu.Item
-                    name='Episodes'
-                    active={activeItem === 'Episodes'}
-                    onClick={this.handleItemClick}
-                >
-                    Episodes
-                </Menu.Item>
+                </NavLink>
             </Menu>
         )
     }
